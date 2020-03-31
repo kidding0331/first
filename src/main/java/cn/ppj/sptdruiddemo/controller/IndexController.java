@@ -25,7 +25,6 @@ public class IndexController {
     public String index(Model model) {
         List<Map<String, Object>> maps = jdbcTemplate.queryForList("select * from et_user");
         model.addAttribute("users", maps);
-        //123
         return "index";
     }
 
@@ -34,7 +33,6 @@ public class IndexController {
     public String user(Model model) {
         User user = userDao.get(4);
         System.out.println("111" + user.toString());
-        //123
         return user.toString();
     }
 }
